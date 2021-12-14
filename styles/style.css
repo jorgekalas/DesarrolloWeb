@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@-webkit-keyframes flip-in-diag-2-br{0%{-webkit-transform:rotate3d(-1,1,0,-80deg);transform:rotate3d(-1,1,0,-80deg);opacity:0}100%{-webkit-transform:rotate3d(1,1,0,0deg);transform:rotate3d(1,1,0,0deg);opacity:1}}@keyframes flip-in-diag-2-br{0%{-webkit-transform:rotate3d(-1,1,0,-80deg);transform:rotate3d(-1,1,0,-80deg);opacity:0}100%{-webkit-transform:rotate3d(1,1,0,0deg);transform:rotate3d(1,1,0,0deg);opacity:1}}
 
 *{
     box-sizing: border-box;
@@ -9,8 +10,6 @@
 body{
     font-family: 'Roboto', sans-serif;
 }
-
-/* GRID */
 
 
 /* HEADER */
@@ -25,6 +24,7 @@ header{
     align-items: center;
     padding: 0px 50px 0px 50px;
     border-bottom: solid 1px gray;
+    background-image: linear-gradient(to bottom, #d8f3dcff, #b7e4c7ff);
 }
 
 header h1{
@@ -37,13 +37,18 @@ header img{
 
 header nav ul{
     display: flex;
-    list-style: none;
+    list-style-type: none;
+
 }
 
 header nav ul li{
     margin-right: 40px;
     text-align: center;
-    font-size: 1.rem;
+    font-size: 1rem;
+}
+
+header nav ul li:hover{
+    font-weight: bold;
 }
 
 header nav ul a{
@@ -71,6 +76,12 @@ main section.imagenes h2{
 }
 
 /* INDEX: IMAGENES */
+
+.flip-in-diag-2-br {
+	-webkit-animation: flip-in-diag-2-br 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: flip-in-diag-2-br 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
 
 main section.imagenes{
     display: flex;
@@ -100,6 +111,7 @@ main section.imagenes p{
     justify-content:center;
     align-items: center;
     text-align:justify;
+    background-image: linear-gradient(to bottom, #b7e4c7ff, #95d5b2ff) 
 }
 
 /* INDEX: SERVICIOS */
@@ -111,7 +123,7 @@ main section.servicios{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #b7e4c7ff;
+    background-image: linear-gradient(to bottom,#d8f3dcff, #74c69dff); 
     padding-bottom: 3rem;
 }
 
@@ -145,7 +157,7 @@ font-size: 2.5rem;
 
 
 main section.form{
-    background-color: #74c69dff;
+    background-image: linear-gradient(to bottom, #52b788ff, #2d6a4fff); 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -202,6 +214,17 @@ main section.form button{
     cursor: pointer;
 }
 
+main section.form div.labelContainer div input:focus,
+main section.form div.labelContainer div select:focus,
+main section.form div.labelContainer div textarea:focus,
+main section.reservas form div.container input:focus,
+main section.reservas form div.container select:focus,
+main section.reservas form div.container textarea:focus
+{
+    background-color:  #d8f3dcff;
+}
+
+
 /* BOTÓN FIJO */
 
 button.btn__fijo{
@@ -214,10 +237,20 @@ button.btn__fijo{
     background-color: #d8f3dcff;
     position: fixed;
     bottom: 175px;
-    right: 0px;
+    right: 40px;
     z-index: 10;
     font-weight: 700;
     cursor: pointer;
+}
+
+button:hover,
+main section.form button:hover{
+    cursor: pointer;
+    background-color: #b7e4c7ff;
+    border: 3px solid #081c15ff;
+    color: #000;
+    animation: transition 3s 1;
+    opacity: 90%;
 }
 
 button.btn__fijo i{
@@ -344,9 +377,11 @@ main section.entorno div.entorno div.contenedor3{
 
 /* Reservas */
 
-section.reservas{
+main section.reservas{
     display:flex;
     flex-direction: column;
+    background-image: url(../assets/img/background_reservas.jpg);
+    background-size: cover;
 }
 
 section.reservas form div.container{
@@ -740,4 +775,10 @@ main section.contactanos div.contactanos{
         main section.contactanos button{
             width: 200px;}
 
+    }
+
+    @keyframes transition{
+        0%{transform:scale(1)}
+        25%{transform:scale(1.10)}
+        100%{transform:scale(1)}
     }
