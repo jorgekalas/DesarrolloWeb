@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="icon" href="../assets/logo.jpg">
+    <title>Reservas</title>
+</head>
+<body>
+    <header>
+        <h1>Reservas</h1>
+        <a href="../index.html">
+            <img src="../assets/logo.jpg" alt="Logo">
+        </a>
+        <nav>
+            <ul>
+                <a href="../index.html"><li>Inicio</li></a>
+                <a href="acerca_de_nosotros.html"><li>Acerca de nosotros</li></a>
+                <a href="galeria.html"><li>Galería</li></a>
+                <a href="entorno_y_actividades.html"><li>Entorno y actividades</li></a>
+                <a href="reservas.html"><li>Reservas</li></a>
+                <a href="contactanos.html"><li>Contactanos</li></a>
+            </ul>
+        </nav>
+        <i class="fas fa-bars"></i>
+    </header>
+    <main>
+        <section class="form reservas">
+            <h2>Realizá tu reserva</h2>
+            <form action="#" method="POST">
+                    <div class="container">
+
+                        <div>
+                        <label for="nombre">Nombre y apellido del titular de la reserva:</label>
+                        <input type="text" name="nombre" id="nombre" required>
+                        </div>
+
+                        <div>
+                        <label for="email">Correo electrónico: </label>
+                        <input type="email" name="email" id="email" required>
+                        </div>
+                        
+                        <div>
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" name="telefono" id="telefono" required>
+                        </div>
+
+                        <div>
+                        <label for="cantidadInquilinos">Seleccioná la cantidad de inquilinos</label>
+                        <select name="cantidadInquilinos" id="cantidadInquilinos" required>
+                            <option value="default" selected disabled>Elegí una opción</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="4">5</option>
+                            <option value="4">6</option>
+                            <option value="4">7</option>
+                            <option value="4">8</option>
+                            <option value="4">9</option>
+                            <option value="4">10</option>
+                        </select>
+                        </div>
+
+                        <div class="fechas">
+                        <label for="fecha_entrada">Desde</label>
+                        <input type="date" name="fecha_entrada" id="fecha_entrada">
+
+                        <label for="fecha_salida">Hasta</label>
+                        <input type="date" name="fecha_salida" id="fecha_salida">
+                        </div>    
+
+                        <div class="servicioAdicional">
+                        <label for="mensaje">¿Te gustaría solicitar algún servicio adicional?</label>
+                        <textarea name="mensaje" id="mensaje" required rows=10 placeholder="Por ejemplo, ropa de cama, toallas y toallones, cuna, etc."></textarea>
+                        </div>
+
+                    </div>
+                    <button type="submit">Enviar</button>
+                </section>
+            </form>
+        
+            <button class="btn__fijo">
+                <i class="fab fa-whatsapp-square"></i>
+                <span> Escribinos por WhatsApp</span>
+            </button>
+
+    </main>
+    <footer>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3380.848234117591!2d-64.54040108431425!3d-32.07335333554515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d2bb5006eaef15%3A0x8422c633f4d05fb2!2sMalvinas%20Argentinas%20189%2C%20Santa%20Rosa%20de%20Calamuchita%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1637723912207!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="footer__media">
+            <a href="#">
+                <i class="fab fa-facebook-square"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-whatsapp-square"></i>
+            </a>
+        </div>
+        <div class="footer__datos">   
+            <span>La Casa de Lili</span>
+            <span>Malvinas Argentinas 189, Santa Rosa de Calamuchita, Córdoba, C.P. 5000</span>
+            <span>Teléfono: 03546 - 420715</span>
+        </div>
+    </footer>
+</body>
+</html>
