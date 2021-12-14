@@ -1,0 +1,784 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@-webkit-keyframes flip-in-diag-2-br{0%{-webkit-transform:rotate3d(-1,1,0,-80deg);transform:rotate3d(-1,1,0,-80deg);opacity:0}100%{-webkit-transform:rotate3d(1,1,0,0deg);transform:rotate3d(1,1,0,0deg);opacity:1}}@keyframes flip-in-diag-2-br{0%{-webkit-transform:rotate3d(-1,1,0,-80deg);transform:rotate3d(-1,1,0,-80deg);opacity:0}100%{-webkit-transform:rotate3d(1,1,0,0deg);transform:rotate3d(1,1,0,0deg);opacity:1}}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* HEADER */
+
+header{
+    z-index: 100;
+    position: sticky;
+    top:0px;
+    background-color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px 0px 50px;
+    border-bottom: solid 1px gray;
+    background-image: linear-gradient(to bottom, #d8f3dcff, #b7e4c7ff);
+}
+
+header h1{
+    display: none;
+}
+
+header img{
+    width: 150px;
+}
+
+header nav ul{
+    display: flex;
+    list-style-type: none;
+
+}
+
+header nav ul li{
+    margin-right: 40px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+header nav ul li:hover{
+    font-weight: bold;
+}
+
+header nav ul a{
+text-decoration: none;
+}
+
+header i.fa-bars{
+    display: none;
+}
+
+/* MAIN */
+
+main section{
+    text-align: center;
+}
+
+main section h2{
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 5rem;
+}
+
+main section.imagenes h2{
+    margin-top: 0px;
+}
+
+/* INDEX: IMAGENES */
+
+.flip-in-diag-2-br {
+	-webkit-animation: flip-in-diag-2-br 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: flip-in-diag-2-br 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+main section.imagenes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main section.imagenes div.imagenes-container,
+main section.galeria div.galeria{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 3px;
+}
+
+main section.imagenes img,
+main section.imagenes p{
+    width: 333px;
+    height: 333px;
+}
+
+main section.imagenes p{
+    border: 1px solid black;
+    padding: 25px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    text-align:justify;
+    background-image: linear-gradient(to bottom, #b7e4c7ff, #95d5b2ff) 
+}
+
+/* INDEX: SERVICIOS */
+
+main section.servicios{
+    margin: 4rem 0rem 4rem;
+    font-size:1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom,#d8f3dcff, #74c69dff); 
+    padding-bottom: 3rem;
+}
+
+main section.servicios ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    line-height: 100px;
+    padding: 25px 75px;
+    width: 67%;
+}
+
+main section.servicios ul div{
+    display: flex;
+    justify-content: space-between;
+}
+
+main section.servicios ul div li{
+    margin-right: 25px;
+    list-style: none;
+    width: 288px;
+}
+
+main section.servicios i{
+font-size: 2.5rem;
+}
+
+/* INDEX: FORMULARIO */
+
+
+main section.form{
+    background-image: linear-gradient(to bottom, #52b788ff, #2d6a4fff); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main section.form h2{
+    padding: 50px;
+}
+
+main section.form div.labelContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+main section.form div.labelContainer div.subContainer1,
+main section.form div.labelContainer div.subContainer2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main section.form label{
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+main section.form input,
+main section.form select{
+    padding: 8px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+main section.form textarea{
+    width: 300px;
+    height: 230px;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+main section.form button{
+    padding: 15px ;
+    font-size: 1.3rem;
+    border-radius: 50px;
+    margin: 20px;
+    width: 350px;
+    background-color: #1b4332ff;
+    color: #FFF;
+    border-style: none;
+    cursor: pointer;
+}
+
+main section.form div.labelContainer div input:focus,
+main section.form div.labelContainer div select:focus,
+main section.form div.labelContainer div textarea:focus,
+main section.reservas form div.container input:focus,
+main section.reservas form div.container select:focus,
+main section.reservas form div.container textarea:focus
+{
+    background-color:  #d8f3dcff;
+}
+
+
+/* BOTÓN FIJO */
+
+button.btn__fijo{
+    text-align: center;
+    border-style: none;
+    padding: 20px;
+    border-radius: 50px;
+    margin: 20px;
+    width: 150px;
+    background-color: #d8f3dcff;
+    position: fixed;
+    bottom: 175px;
+    right: 40px;
+    z-index: 10;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover,
+main section.form button:hover{
+    cursor: pointer;
+    background-color: #b7e4c7ff;
+    border: 3px solid #081c15ff;
+    color: #000;
+    animation: transition 3s 1;
+    opacity: 90%;
+}
+
+button.btn__fijo i{
+    font-size: 2rem;
+    color:#52b788ff;
+    line-height: 20px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+
+/* FOOTER */
+
+footer{
+    position: relative;
+    bottom: 0;
+    color: #FFF;
+    background-color: #081c15ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+footer div.footer__media{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 7rem;
+}
+
+footer div.footer__datos{
+    display:flex;
+    flex-direction: column;
+    padding:1rem;
+}
+
+footer iframe{
+    width: 300px;
+    height: 120px;
+    margin-left:25px;
+}
+
+footer span, footer i{
+    margin-top: 25px;
+}
+
+footer div a i{
+    font-size: 3rem;
+    margin-right: 1.3rem;
+    text-decoration: none;
+}
+
+/* SECCIONES */
+
+/* Acerca de nosotros */
+
+main h2.nosotros{
+    text-align: center;
+    padding: 50px;
+    font-size: 40px;
+}
+
+
+main section.nosotros{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../assets/img/background_acercaDeNosotros.jpg);
+    background-size: cover;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+main section.nosotros article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 210px;
+}
+
+main section.nosotros article.articleOne img,
+main section.nosotros article.articleTwo img{
+    width: 500px;
+}
+
+main section.nosotros article div.articleText{
+    text-align: justify;
+    padding: 70px;
+}
+
+main section.nosotros article div.articleText p{
+    padding: 25px;
+}
+
+/* Galería */
+
+
+/* Entorno y actividades */
+
+main section.entorno,
+main section.galeria{
+    margin-bottom: 70px;
+}
+
+main section.entorno div.entorno{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 3px;
+}
+
+
+main section.entorno div.entorno div.contenedor1,
+main section.entorno div.entorno div.contenedor2,
+main section.entorno div.entorno div.contenedor3{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+
+/* Reservas */
+
+main section.reservas{
+    display:flex;
+    flex-direction: column;
+    background-image: url(../assets/img/background_reservas.jpg);
+    background-size: cover;
+}
+
+section.reservas form div.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2d6a4fff;
+    border-radius: 15px;
+    padding: 50px;
+    color: #FFF;
+    width: 50vw;
+}
+
+section.reservas form div.container div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.reservas form div.container div.servicioAdicional{
+    display: flex;
+    flex-direction: column;
+}
+
+section.reservas form div.container div.servicioAdicional textarea{
+    width: 400px;
+    border-radius: 12px;
+}
+
+
+/* Contactanos */
+
+main section.contactanos {
+    background-image: url(../assets/img/background_contacto.png);
+    background-size: cover;
+}
+
+main section.contactanos div.contactanos{
+    background-color: #2d6a4fff;
+    border-radius: 15px;
+    padding: 50px;
+    color: #FFF;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    header, main, footer {
+        width: 100%;
+    }
+
+
+    main section.imagenes div.imagenes-container,
+    main section.galeria div.galeria{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    main section.entorno div.entorno{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    main section.servicios{
+        font-size:1rem;
+    }
+
+    main section.servicios ul{
+        line-height: 50px;
+        padding: 5px 25px;
+    }
+
+    main section.servicios ul div li{
+        margin-right: 0;
+        width: 200px;
+    }
+
+    button.btn__fijo{    
+        width: 100px;
+        bottom: 120px;
+        right: 50px;
+        font-size: 0.5rem;
+    }
+
+    footer div.footer__media{
+        padding: 0rem 1rem;
+    }
+
+    footer div.footer__datos{
+        padding: 16px 0px;
+    }
+
+    footer div.footer__datos span{
+        font-size: 0.7rem; 
+        margin: 5px
+    }
+
+    footer iframe{
+        height: 75px;
+    }
+
+    section.nosotros article{
+        flex-direction: column;
+    }
+
+    section.nosotros article.articleOne div.articleText{
+        padding-top: 0px;
+    }
+
+    section.reservas form div.container{
+        padding: 20px;
+        width: 75vw;
+    }
+
+    section.reservas div.container div label,
+    section.reservas div.container div input{
+        font-size: 0.9rem;
+    }
+
+    section.reservas form button{
+        font-size: 1.5rem;
+    }
+}
+
+
+
+@media screen and (max-width: 768px){
+    header nav{
+        display: none;
+    }
+
+    header i.fa-bars{
+        display:inline-block;
+        font-size: 25px;
+    }
+
+    header img{
+        width: 100px;
+    }
+
+    main section.imagenes div.imagenes-container,
+    main section.galeria div.galeria{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    main section.entorno div.entorno{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    button.btn__fijo{    
+        width: 100px;
+        bottom: 120px;
+        right: 0px;
+        font-size: 0.5rem;
+    }
+
+
+    footer div.footer__media{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 22px; 
+    }
+
+
+    footer div.footer__datos span{
+        font-size: 0.7rem; 
+        margin: 5px
+    }
+
+    footer iframe{
+        height: 75px;
+    }
+
+    
+    main section.servicios ul div{
+        flex-direction: column;
+    }
+
+    main section.servicios ul div li{
+        margin-right: 0;
+        width: 200px;    
+    }
+
+    main section.servicios ul div li i{
+        margin-right: 10px;
+    }
+
+    main section.form div.labelContainer{
+        flex-direction: column;}
+
+    footer iframe{
+        display: none;
+    }
+        
+    main section.nosotros article.articleOne img,
+    main section.nosotros article.articleTwo img{
+        width: 400px;
+    }
+
+    main section.nosotros article div.articleText p{
+        width: 400px;
+        font-size: 1rem;
+    }   
+
+    section.reservas div.container div label,
+    section.reservas div.container div input{
+        font-size: 0.7rem;
+    }
+
+    section.reservas div.container div.fechas{
+        display: flex;
+        flex-direction: column;
+    }
+
+    section.reservas div.container div.servicioAdicional textarea#mensaje{
+        width: 200px;
+    }
+
+    section.reservas form button{
+        font-size: 1rem;
+        width: 200px;}
+
+    }
+
+
+@media screen and (max-width: 480px){
+    header nav{
+        display: none;
+    }
+
+    header i.fa-bars{
+        display:inline-block;
+        font-size: 25px;
+    }
+
+    main section h2{
+        font-size: 35px;
+        padding: 40px;
+    }
+
+    main section.imagenes div.imagenes-container,
+    main section.galeria div.galeria{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    main section.entorno div.entorno{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    main section.imagenes img,
+        main section.imagenes p{
+            width: 200px;
+            height: 200px;
+        }
+
+    main section.imagenes p{
+            font-size: 0.7rem;
+            padding: 2px;
+        }
+
+    button.btn__fijo{    
+        display: none;
+    }
+
+
+    main section.servicios ul div{
+        flex-direction: column;
+    }
+
+    main section.servicios ul div li{
+        margin-right: 0;
+        width: 200px;    
+    }
+
+    main section.servicios ul div li i{
+        margin-right: 10px;
+    }
+
+    main section.form div.labelContainer{
+    flex-direction: column;}
+
+    footer iframe{
+        display: none;}
+
+
+    main section.nosotros h2{
+        font-size: 2rem;
+        padding-bottom: 0px;
+    }
+    main section.nosotros article.articleOne img,
+    main section.nosotros article.articleTwo img{
+        width: 300px;
+    }
+
+    main section.nosotros article div.articleText p{
+        width: 300px;
+        font-size: 0.9rem;
+    }
+
+    
+    main section.contactanos div.contactanos{
+        width: 300px;
+    }
+
+    main section.contactanos div.contactanos textarea{
+        width: 250px;
+    }
+
+    main section.form button {
+        width: 100px;
+    }
+
+    section.reservas div.container div label,
+    section.reservas div.container div input{
+        font-size: 0.7rem;
+        width: 150px;
+    }
+
+    section.reservas div.container div{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+}
+
+
+    @media screen and (max-width: 320px){
+        
+        main section.imagenes div.imagenes-container,
+        main section.galeria div.galeria{
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        }
+
+        main section.entorno div.entorno{
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+        }
+        
+        main section.imagenes img,
+        main section.imagenes p{
+            width: 200px;
+            height: 200px;
+        }
+
+        main section.imagenes p{
+            font-size: 0.7rem;
+            padding: 2px;
+        }
+
+        main section.form div.labelContainer label,
+        main section.form div.labelContainer input{
+            font-size: 0.7rem;
+        }
+
+        main section.form div.labelContainer div.subContainer2 textarea{
+            width: 230px;
+        }
+
+        main section.form button {
+            width: 100px;
+        }
+
+        main section.contactanos h2{
+            font-size: 2rem;
+            padding: 25px;
+        }
+        main section.contactanos div.contactanos{
+            width: 250px;
+            margin: 0px;
+        }
+
+
+        main section.contactanos div.contactanos input,
+        main section.contactanos div.contactanos select{
+            width: 100px;
+        }
+
+        main section.contactanos div.contactanos div.subContainer2 textarea{
+            width: 150px;
+            height: 150px;
+        }
+    
+        main section.contactanos button{
+            width: 200px;}
+
+    }
+
+    @keyframes transition{
+        0%{transform:scale(1)}
+        25%{transform:scale(1.10)}
+        100%{transform:scale(1)}
+    }
