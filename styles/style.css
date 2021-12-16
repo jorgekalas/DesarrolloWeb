@@ -61,6 +61,11 @@ header i.fa-bars{
 
 /* MAIN */
 
+main {
+    background-image: url(../assets/img/background_acercaDeNosotros.jpg);
+    background-size:contain
+}
+
 main section{
     text-align: center;
 }
