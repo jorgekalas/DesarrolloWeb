@@ -55,7 +55,7 @@ header nav ul a{
 text-decoration: none;
 }
 
-header i.fa-bars{
+div.dropdown{
     display: none;
 }
 
@@ -84,7 +84,7 @@ main section.imagenes h2{
 
 .flip-in-diag-2-br {
 	-webkit-animation: flip-in-diag-2-br 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: flip-in-diag-2-br 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: flip-in-diag-2-br 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 
@@ -107,6 +107,7 @@ main section.imagenes img,
 main section.imagenes p{
     width: 333px;
     height: 333px;
+    margin-bottom: 0px;
 }
 
 main section.imagenes p{
@@ -354,9 +355,24 @@ main section.nosotros article div.articleText p{
 
 /* Galería */
 
+section.galeria{
+
+    margin-bottom: 40px;
+
+    
+}
+
+main.galeria{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size:cover;
+}
+
+
 
 /* Entorno y actividades */
-
+/* 
 main section.entorno,
 main section.galeria{
     margin-bottom: 70px;
@@ -377,7 +393,33 @@ main section.entorno div.entorno div.contenedor3{
     flex-direction: column;
     justify-content:center;
     align-items: center;
+} */
+
+footer.entorno{
+    position: relative;
+    bottom: 0;
 }
+
+section.entorno{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+div.carousel{
+    width: 70%;
+    margin-bottom: 75px;
+}
+
+div.carousel button{
+    background-color: transparent;
+    border: none;
+}
+
+
+
 
 
 /* Reservas */
@@ -519,9 +561,8 @@ main section.contactanos div.contactanos{
         display: none;
     }
 
-    header i.fa-bars{
-        display:inline-block;
-        font-size: 25px;
+    div.dropdown{
+        display: inline-block;
     }
 
     header img{
@@ -649,8 +690,8 @@ main section.contactanos div.contactanos{
         }
 
     main section.imagenes p{
-            font-size: 0.7rem;
-            padding: 2px;
+        font-size: 0.6rem;
+        padding: 5px;
         }
 
     button.btn__fijo{    
@@ -740,8 +781,8 @@ main section.contactanos div.contactanos{
         }
 
         main section.imagenes p{
-            font-size: 0.7rem;
-            padding: 2px;
+            font-size: 0.6rem;
+            padding: 5px;
         }
 
         main section.form div.labelContainer label,
