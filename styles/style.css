@@ -685,13 +685,13 @@ main section.contactanos div.contactanos{
 
     main section.imagenes img,
         main section.imagenes p{
-            width: 200px;
-            height: 200px;
+            width: 300px;
+            height: 300px;
         }
 
     main section.imagenes p{
-        font-size: 0.6rem;
-        padding: 5px;
+        font-size: 0.9rem;
+        padding: 25px;
         }
 
     button.btn__fijo{    
