@@ -705,13 +705,13 @@ main section.contactanos div.contactanos{
 
     main section.imagenes img,
         main section.imagenes p{
-            width: 300px;
-            height: 300px;
+            width: 200px;
+            height: 200px;
         }
 
     main section.imagenes p{
-        font-size: 0.9rem;
-        padding: 25px;
+        font-size: 0.6rem;
+        padding: 5px;
         }
 
     button.btn__fijo{    
@@ -725,7 +725,7 @@ main section.contactanos div.contactanos{
 
     main section.servicios ul div li{
         margin-right: 0;
-        width: 250px;    
+        width: 200px;    
     }
 
     main section.servicios ul div li i{
