@@ -441,7 +441,6 @@ section.entorno img{
 
 
 
-
 /* Reservas */
 
 main section.reservas{
@@ -703,6 +702,11 @@ main section.contactanos div.contactanos{
         grid-template-rows: 1fr;
     }
 
+    section.entorno img{
+        width: auto;
+        height: 20rem;
+    }
+    
     main section.imagenes img,
         main section.imagenes p{
             width: 200px;
@@ -793,6 +797,12 @@ main section.contactanos div.contactanos{
             grid-template-columns: 1fr;
             grid-template-rows: 1fr;
         }
+
+        section.entorno img{
+            width: auto;
+            height: 20rem;
+        }
+
         
         main section.imagenes img,
         main section.imagenes p{
