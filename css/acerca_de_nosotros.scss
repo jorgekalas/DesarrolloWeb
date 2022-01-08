@@ -1,0 +1,53 @@
+@import "./colores";
+
+
+main{
+    section.nosotros{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url(../assets/img/background_acercaDeNosotros.jpg);
+        background-size: cover;
+        font-size: 1.2rem;
+        font-weight: 700;
+
+        h2.nosotros{
+            text-align: center;
+            padding: 50px;
+            font-size: 40px; 
+        }
+
+        article{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 210px;
+
+            &.articleOne 
+            img {
+            width: 500px;
+            }
+    
+            &.articleTwo
+            img {
+            width: 500px;
+            }
+        }
+
+            div.articleText{
+                text-align: justify;
+                padding: 70px;
+            }
+
+            p{
+                border-radius: 25px;
+                padding: 25px;
+                background-color: $green2;
+            
+            &:hover{
+                background-color: $green3;
+            }
+            }
+    }
+}

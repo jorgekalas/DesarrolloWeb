@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 @-webkit-keyframes flip-in-diag-2-br{0%{-webkit-transform:rotate3d(-1,1,0,-80deg);transform:rotate3d(-1,1,0,-80deg);opacity:0}100%{-webkit-transform:rotate3d(1,1,0,0deg);transform:rotate3d(1,1,0,0deg);opacity:1}}@keyframes flip-in-diag-2-br{0%{-webkit-transform:rotate3d(-1,1,0,-80deg);transform:rotate3d(-1,1,0,-80deg);opacity:0}100%{-webkit-transform:rotate3d(1,1,0,0deg);transform:rotate3d(1,1,0,0deg);opacity:1}}
 
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
 
 body{
     font-family: 'Roboto', sans-serif;
@@ -73,9 +75,11 @@ main section{
 }
 
 main section h2{
-    font-size: 2.5rem;
+    font-size: 3rem;
     text-align: center;
     padding: 5rem;
+    COLOR:  #2d6a4fff;
+    text-shadow: 0px 0px 9px;
 }
 
 main section.imagenes h2{
@@ -330,45 +334,6 @@ footer div a i.fa-whatsapp-square:hover{
 
 /* Acerca de nosotros */
 
-main h2.nosotros{
-    text-align: center;
-    padding: 50px;
-    font-size: 40px;
-}
-
-
-main section.nosotros{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url(../assets/img/background_acercaDeNosotros.jpg);
-    background-size: cover;
-    font-size: 1.2rem;
-    font-weight: 700;
-}
-
-main section.nosotros article{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 40px 210px;
-}
-
-main section.nosotros article.articleOne img,
-main section.nosotros article.articleTwo img{
-    width: 500px;
-}
-
-main section.nosotros article div.articleText{
-    text-align: justify;
-    padding: 70px;
-}
-
-main section.nosotros article div.articleText p{
-    padding: 25px;
-}
-
 /* Galería */
 
 section.galeria{
@@ -388,28 +353,7 @@ main.galeria{
 
 
 /* Entorno y actividades */
-/* 
-main section.entorno,
-main section.galeria{
-    margin-bottom: 70px;
-}
 
-main section.entorno div.entorno{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 3px;
-}
-
-
-main section.entorno div.entorno div.contenedor1,
-main section.entorno div.entorno div.contenedor2,
-main section.entorno div.entorno div.contenedor3{
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
-} */
 
 footer.entorno{
     position: relative;
@@ -441,6 +385,7 @@ section.entorno img{
 
 
 
+
 /* Reservas */
 
 main section.reservas{
@@ -468,6 +413,19 @@ section.reservas form div.container div{
     align-items: center;
 }
 
+section.reservas form div.container div.reservas_correo_telefono,
+section.reservas form div.container div.fechas
+{
+    display: flex;
+    flex-direction: row;
+}
+
+
+section.reservas form div.container div label{
+    font-weight: 500;
+}
+
+
 section.reservas form div.container div.servicioAdicional{
     display: flex;
     flex-direction: column;
@@ -492,6 +450,11 @@ main section.contactanos div.contactanos{
     padding: 50px;
     color: #FFF;
 }
+
+main section.contactanos div.contactanos label{
+    font-weight: 500;
+}
+
 
 
 
@@ -702,11 +665,6 @@ main section.contactanos div.contactanos{
         grid-template-rows: 1fr;
     }
 
-    section.entorno img{
-        width: auto;
-        height: 20rem;
-    }
-    
     main section.imagenes img,
         main section.imagenes p{
             width: 200px;
@@ -797,12 +755,6 @@ main section.contactanos div.contactanos{
             grid-template-columns: 1fr;
             grid-template-rows: 1fr;
         }
-
-        section.entorno img{
-            width: auto;
-            height: 20rem;
-        }
-
         
         main section.imagenes img,
         main section.imagenes p{
