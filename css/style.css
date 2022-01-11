@@ -78,7 +78,7 @@ main section h2{
     font-size: 3rem;
     text-align: center;
     padding: 5rem;
-    COLOR:  #2d6a4fff;
+    color:  #2d6a4fff;
     text-shadow: 0px 0px 9px;
 }
 
@@ -183,6 +183,10 @@ main section.form{
 
 main section.form h2{
     padding: 50px;
+}
+
+main section.form h2.formIndex{
+    color: #FFF;
 }
 
 main section.form div.labelContainer{
@@ -382,6 +386,7 @@ section.entorno img{
     width: 1000px;
     height: 700px;
 }
+
 
 
 
@@ -810,3 +815,7 @@ main section.contactanos div.contactanos label{
         25%{transform:scale(1.10)}
         100%{transform:scale(1)}
     }
+
+    @keyframes rotation{
+    100%{transform:rotate(360deg)}
+}
