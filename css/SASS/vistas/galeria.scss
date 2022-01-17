@@ -1,0 +1,16 @@
+
+main.galeria{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size:cover;
+
+    section.galeria{
+        margin-bottom: 40px;
+
+        div.galeria img:hover{
+                cursor: pointer;
+                animation: zoom 5s 4;
+        }
+    }
+}

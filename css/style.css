@@ -29,19 +29,20 @@ header{
     background-image: linear-gradient(to bottom, #d8f3dcff, #b7e4c7ff);
 }
 
-header h1{
-    display: none;
-}
-
 header img{
     width: 150px;
 }
+
 
 header nav ul{
     display: flex;
     list-style-type: none;
 
 }
+
+
+
+
 
 header nav ul li{
     margin-right: 40px;
@@ -50,10 +51,33 @@ header nav ul li{
     color: #000;
 }
 
-header nav ul li:hover{
+header nav ul a li{
+    position: relative;
+}
+
+header nav ul a li::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #74c69dff, #52b788ff, #2d6a4fff);
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+}
+
+
+header nav ul a li:hover::before 
+{
     font-weight: bold;
     color: #1b4332ff; 
-}
+    transform: scaleX(1);
+    transition-timing-function: cubic-bezier(0.2, 1, 0.82, 0.94);
+} 
+
 
 header nav ul a{
 text-decoration: none;
@@ -74,7 +98,7 @@ main section{
     text-align: center;
 }
 
-main section h2{
+main section h1, main section h2{
     font-size: 3rem;
     text-align: center;
     padding: 5rem;
@@ -334,134 +358,8 @@ footer div a i.fa-whatsapp-square:hover{
     opacity: 75%;
 }
 
-/* SECCIONES */
 
-/* Acerca de nosotros */
-
-/* Galería */
-
-section.galeria{
-
-    margin-bottom: 40px;
-
-    
-}
-
-main.galeria{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-size:cover;
-}
-
-
-
-/* Entorno y actividades */
-
-
-footer.entorno{
-    position: relative;
-    bottom: 0;
-}
-
-section.entorno{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-
-div.carousel{
-    width: 70%;
-    margin-bottom: 75px;
-}
-
-div.carousel button{
-    background-color: transparent;
-    border: none;
-}
-
-section.entorno img{
-    width: 1000px;
-    height: 700px;
-}
-
-
-
-
-
-/* Reservas */
-
-main section.reservas{
-    display:flex;
-    flex-direction: column;
-    background-image: url(../assets/img/background_reservas.jpg);
-    background-size: cover;
-}
-
-section.reservas form div.container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #2d6a4fff;
-    border-radius: 15px;
-    padding: 50px;
-    color: #FFF;
-    width: 50vw;
-}
-
-section.reservas form div.container div{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-section.reservas form div.container div.reservas_correo_telefono,
-section.reservas form div.container div.fechas
-{
-    display: flex;
-    flex-direction: row;
-}
-
-
-section.reservas form div.container div label{
-    font-weight: 500;
-}
-
-
-section.reservas form div.container div.servicioAdicional{
-    display: flex;
-    flex-direction: column;
-}
-
-section.reservas form div.container div.servicioAdicional textarea{
-    width: 400px;
-    border-radius: 12px;
-}
-
-
-/* Contactanos */
-
-main section.contactanos {
-    background-image: url(../assets/img/background_contacto.png);
-    background-size: cover;
-}
-
-main section.contactanos div.contactanos{
-    background-color: #2d6a4fff;
-    border-radius: 15px;
-    padding: 50px;
-    color: #FFF;
-}
-
-main section.contactanos div.contactanos label{
-    font-weight: 500;
-}
-
-
-
+/* Media Query */
 
 @media screen and (max-width: 1024px) {
     header, main, footer {
@@ -528,12 +426,22 @@ main section.contactanos div.contactanos label{
 
     section.reservas form div.container{
         padding: 20px;
-        width: 75vw;
     }
 
-    section.reservas div.container div label,
+    section.reservas form div.container div.reservas_correo_telefono,
+    section.reservas form div.container div.fechas{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    section.reservas div.container div label{
+        font-size: 0.8rem;
+    }
+
     section.reservas div.container div input{
-        font-size: 0.9rem;
+        font-size: 0.7rem;
     }
 
     section.reservas form button{
@@ -565,6 +473,16 @@ main section.contactanos div.contactanos label{
     main section.entorno div.entorno{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
+    }
+
+    main section.entorno div.videoEntorno iframe{
+        width: 500px;
+        height: 500px;
+    }
+
+    main section.entorno img{
+        width: 500px;
+        height: 500px;
     }
 
     button.btn__fijo{    
@@ -628,9 +546,23 @@ main section.contactanos div.contactanos label{
         font-size: 0.7rem;
     }
 
-    section.reservas div.container div.fechas{
+    section.reservas div.container{
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section.reservas div.container div.reservas_correo_telefono{
+        display: flex;
+        flex-direction: column;
+    }
+
+    section.reservas div.container div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     section.reservas div.container div.servicioAdicional textarea#mensaje{
@@ -640,6 +572,7 @@ main section.contactanos div.contactanos label{
     section.reservas form button{
         font-size: 1rem;
         width: 200px;}
+
 
     }
 
@@ -668,6 +601,16 @@ main section.contactanos div.contactanos label{
     main section.entorno div.entorno{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
+    }
+
+    main section.entorno div.videoEntorno iframe{
+        width: 350px;
+        height: 350px;
+    }
+
+    main section.entorno div.carousel img{
+        width: 350px;
+        height: 350px;
     }
 
     main section.imagenes img,
@@ -733,10 +676,22 @@ main section.contactanos div.contactanos label{
         width: 100px;
     }
 
+    section.reservas div.container div{
+        padding: 5px;
+        max-width: 420px;
+        display: flex;
+        flex-direction: column;
+    }
+
     section.reservas div.container div label,
     section.reservas div.container div input{
         font-size: 0.7rem;
         width: 150px;
+    }
+
+    section.reservas div.container div.servicioAdicional textarea{
+        max-width: 175px;
+        font-size: 0.7rem;
     }
 
     section.reservas div.container div{
@@ -761,6 +716,16 @@ main section.contactanos div.contactanos label{
             grid-template-rows: 1fr;
         }
         
+        main section.entorno div.videoEntorno iframe{
+            width: 280px;
+            height: 280px;
+        }
+    
+        main section.entorno div.carousel img{
+            width: 280px;
+            height: 280px;
+        }
+
         main section.imagenes img,
         main section.imagenes p{
             width: 200px;
@@ -774,7 +739,7 @@ main section.contactanos div.contactanos label{
 
         main section.form div.labelContainer label,
         main section.form div.labelContainer input{
-            font-size: 0.7rem;
+            font-size: 0.8rem;
         }
 
         main section.form div.labelContainer div.subContainer2 textarea{
@@ -797,7 +762,11 @@ main section.contactanos div.contactanos label{
 
         main section.contactanos div.contactanos input,
         main section.contactanos div.contactanos select{
-            width: 100px;
+            width: 160px;
+        }
+
+        main section.contactanos div.contactanos select{
+            font-size: 0.8rem;
         }
 
         main section.contactanos div.contactanos div.subContainer2 textarea{
@@ -810,6 +779,10 @@ main section.contactanos div.contactanos label{
 
     }
 
+
+/* Keyframes */
+
+
     @keyframes transition{
         0%{transform:scale(1)}
         25%{transform:scale(1.10)}
@@ -818,4 +791,10 @@ main section.contactanos div.contactanos label{
 
     @keyframes rotation{
     100%{transform:rotate(360deg)}
-}
+    }
+
+    @keyframes zoom{
+        100%{transform:scale(1.4)}
+        0%{transform:scale(1)}
+    }
+

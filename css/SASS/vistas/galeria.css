@@ -1,0 +1,23 @@
+main.galeria {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-size: cover;
+}
+
+main.galeria section.galeria {
+  margin-bottom: 40px;
+}
+
+main.galeria section.galeria div.galeria img:hover {
+  cursor: pointer;
+  -webkit-animation: zoom 5s 4;
+          animation: zoom 5s 4;
+}
+/*# sourceMappingURL=galeria.css.map */

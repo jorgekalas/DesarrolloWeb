@@ -1,0 +1,18 @@
+
+main{
+    section.contactanos {
+    background-image: url(../assets/img/background_contacto.png);
+    background-size: cover;
+
+        div.contactanos{
+            background-color: #2d6a4fff;
+            border-radius: 15px;
+            padding: 50px;
+            color: #FFF;
+
+            label{
+                font-weight: 500;
+            }
+        }
+    }
+}

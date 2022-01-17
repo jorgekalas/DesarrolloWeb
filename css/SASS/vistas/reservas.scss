@@ -1,0 +1,50 @@
+
+main{
+    section.reservas{
+        display:flex;
+        flex-direction: column;
+        background-image: url(../assets/img/background_reservas.jpg);
+        background-size: cover;
+
+        form{
+            div.container{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: #2d6a4fff;
+                border-radius: 15px;
+                padding: 50px;
+                color: #FFF;
+                width: 50vw;
+
+                div{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    label{
+                        font-weight: 500;
+                    }
+                }
+
+                div.reservas_correo_telefono, div.fechas{
+                    display: flex;
+                    flex-direction: row;
+                }
+
+                div.servicioAdicional{
+                    display: flex;
+                    flex-direction: column;
+
+                        textarea{
+                            width: 400px;
+                            border-radius: 12px;
+                    }
+
+                }
+            }
+        }
+    }
+}
+

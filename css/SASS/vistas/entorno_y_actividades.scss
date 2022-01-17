@@ -1,0 +1,60 @@
+
+
+main{
+    section.entorno{
+        background-image: url(../assets/img/background_contacto.png);
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        div.videoEntorno{
+            margin: 5px 25px 75px 25px ;
+        }
+
+        div.carousel{
+            width: 70%;
+            margin-bottom: 75px;
+
+            div.carousel-inner{
+                div.carousel-item{
+                    
+                    img{
+                    width: 1000px;
+                    height: 700px;
+                    }
+
+                        div.carousel-caption{
+
+                            h5{
+                                width: 50%;
+                                text-align: center;
+                                color: #000;
+                                background-color: #FFF;
+                            }
+
+                            p{
+                                width: 50%;
+                                text-align: center;
+                                color: #FFF;
+                                background-color: #000;
+                            }
+                        }
+                    }
+                }
+
+                button{
+                    background-color: transparent;
+                    border: none;
+                }
+
+            }
+
+        }
+    }
+
+footer.entorno{
+    position: relative;
+    bottom: 0;
+}
