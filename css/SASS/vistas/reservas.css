@@ -1,3 +1,8 @@
+main{
+  background-image: url(../../../assets/img/background_reservas_contactanos.jpg);
+  background-size:cover;
+}
+
 main section.reservas {
   display: -webkit-box;
   display: -ms-flexbox;

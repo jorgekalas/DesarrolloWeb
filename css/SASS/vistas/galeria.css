@@ -1,4 +1,7 @@
 main.galeria {
+
+  background-image: url(../../../assets/img/background_galeria_entorno.png);
+  background-size:contain;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
