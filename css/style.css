@@ -595,6 +595,18 @@ footer div a i.fa-whatsapp-square:hover{
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     }
 
+    main section.imagenes div.imagenes img,
+    main section.imagenes div.imagenes p
+    {
+        height: 320px;
+        width: 320px;
+    }
+
+    main section.imagenes div.imagenes p{
+        padding: 2px;
+        font-size: 0.9rem;
+    }
+
     main section.entorno div.entorno{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
@@ -723,15 +735,16 @@ footer div a i.fa-whatsapp-square:hover{
             height: 280px;
         }
 
-        main section.imagenes img,
-        main section.imagenes p{
-            width: 200px;
-            height: 200px;
+        main section.imagenes div.imagenes img,
+        main section.imagenes div.imagenes p
+        {
+            height: 270px;
+            width: 270px;
         }
-
-        main section.imagenes p{
-            font-size: 0.6rem;
-            padding: 5px;
+    
+        main section.imagenes div.imagenes p{
+            padding: 2px;
+            font-size: 0.8rem;
         }
 
         main section.form div.labelContainer label,
