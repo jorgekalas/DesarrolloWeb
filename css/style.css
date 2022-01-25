@@ -88,7 +88,7 @@ div.dropdown{
 
 main {
     background-image: url(../assets/img/background_home_acercaDeNosotros.jpg);
-    background-size:contain;
+    background-size:cover;
 }
 
 main section{
@@ -101,6 +101,53 @@ main section h1, main section h2{
     padding: 5rem;
     color:  #2d6a4fff;
     text-shadow: 0px 0px 9px;
+}
+
+main section.presentacion {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+main section.presentacion h1{
+    padding: 80px 80px 40px 80px ;
+    font-weight: bold;
+}
+
+main section.presentacion h3{
+    font-weight: bold;
+}
+
+main section.presentacion h6{
+    margin-top: 6%;
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 10px 250px;
+    align-self: center;
+    background-color: #2d6a4fff;
+    color: #FFF;
+}
+
+
+main section.presentacion button.descubri{
+    margin-top: 250px;
+    padding: 15px ;
+    font-size: 1.3rem;
+    border-radius: 50px;
+    margin: 20px;
+    width: 350px;
+    background-color: #1b4332ff;
+    color: #FFF;
+    border-style: none;
+    cursor: pointer;
+    margin-top: 200px;
+}
+
+main section.presentacion{
+    height: 100vh;
+    background-image: url(../assets/img/background_galeria_entorno.png);
+    background-size: cover;
 }
 
 main section.imagenes h2{
@@ -135,6 +182,7 @@ main section.imagenes p{
     width: 333px;
     height: 333px;
     margin-bottom: 0px;
+    border-radius: 20px;
 }
 
 main section.imagenes p{
@@ -257,6 +305,8 @@ main section.form button{
     cursor: pointer;
 }
 
+
+
 main section.form div.labelContainer div input:focus,
 main section.form div.labelContainer div select:focus,
 main section.form div.labelContainer div textarea:focus,
@@ -290,9 +340,8 @@ button:hover,
 main section.form button:hover{
     cursor: pointer;
     background-color: #b7e4c7ff;
-    border: 3px solid #081c15ff;
+    border: 1px solid #081c15ff;
     color: #000;
-    animation: transition 3s 1;
     opacity: 90%;
 }
 
@@ -363,6 +412,27 @@ footer div a i.fa-whatsapp-square:hover{
         width: 100%;
     }
 
+    main section.presentacion h1{
+        padding: 80px 80px 40px 80px ;
+        font-weight: bold;
+        font-size: 2.5rem;
+    }
+    
+    main section.presentacion h3{
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    
+    main section.presentacion h6{
+        padding: 10px;
+        margin-top: 6%;
+        font-size: 1rem;
+        align-self: center;
+    }
+
+    main section.presentacion button.descubri{
+        margin-top: 100px;
+    }
 
     main section.imagenes div.imagenes-container,
     main section.galeria div.galeria{
@@ -444,6 +514,14 @@ footer div a i.fa-whatsapp-square:hover{
     section.reservas form button{
         font-size: 1.5rem;
     }
+
+    main.galeria section.galeria div.galeria div.flip-container div.card div.back img,
+    main.galeria section.galeria div.galeria div.flip-container{
+        width: 400px;
+        height: 400px;
+    }
+
+    
 }
 
 
@@ -459,6 +537,30 @@ footer div a i.fa-whatsapp-square:hover{
 
     header img{
         width: 100px;
+    }
+
+    main section.presentacion h1{
+        padding: 80px 80px 40px 80px ;
+        font-weight: bold;
+        font-size: 2rem;
+    }
+    
+    main section.presentacion h3{
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    
+    main section.presentacion h6{
+        padding: 30px;
+        margin-top: 6%;
+        font-size: 0.8rem;
+        align-self: center;
+    }
+
+    main section.presentacion button.descubri{
+        margin-top: 100px;
+        width: 200px;
+        font-size: 1rem;
     }
 
     main section.imagenes div.imagenes-container,
@@ -557,9 +659,8 @@ footer div a i.fa-whatsapp-square:hover{
 
     section.reservas div.container div{
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        flex-direction: row;
+
     }
 
     section.reservas div.container div.servicioAdicional textarea#mensaje{
@@ -582,6 +683,33 @@ footer div a i.fa-whatsapp-square:hover{
     header i.fa-bars{
         display:inline-block;
         font-size: 25px;
+    }
+
+    
+    main section.presentacion h1{
+        padding: 80px 80px 40px 80px ;
+        font-weight: bold;
+        font-size: 1.8rem;
+    }
+    
+    main section.presentacion h3{
+        font-size: 1.2rem;
+        width: 60%;
+        align-self: center;
+    }
+    
+    main section.presentacion h6{
+        padding: 30px;
+        margin-top: 10%;
+        font-size: 0.85rem;
+
+        align-self: center;
+    }
+
+    main section.presentacion button.descubri{
+        margin-top: 100px;
+        width: 200px;
+        font-size: 1rem;
     }
 
     main section h2{
@@ -708,6 +836,20 @@ footer div a i.fa-whatsapp-square:hover{
         flex-direction: column;
     }
 
+    main.galeria section.galeria div.galeria div.flip-container div.card div.front, main.galeria section.galeria div.galeria div.flip-container div.card div.front p{
+        font-size: 1.5rem;
+    }
+
+    main.galeria section.galeria div.galeria div.flip-container div.card div.back img{
+        width: 300px;
+        height: 300px;
+    }
+
+    main.galeria section.galeria div.galeria div.flip-container {
+        width: 300px;
+        height: 300px;
+    }
+
 
 }
 
@@ -756,6 +898,16 @@ footer div a i.fa-whatsapp-square:hover{
             width: 230px;
         }
 
+        footer{
+            flex-direction: column;
+        }
+
+        footer div.footer__media{
+            position: relative;
+            left: 5%;
+        }
+
+
         main section.form button {
             width: 100px;
         }
@@ -787,6 +939,20 @@ footer div a i.fa-whatsapp-square:hover{
         main section.contactanos button{
             width: 200px;}
 
+            main.galeria section.galeria div.galeria div.flip-container div.card div.front, main.galeria section.galeria div.galeria div.flip-container div.card div.front p {
+            font-size: 1.3rem;
+            width: 240px;
+            height: 240px;
+        }
+    
+        main.galeria section.galeria div.galeria div.flip-container div.card div.back img,
+        main.galeria section.galeria div.galeria div.flip-container{
+            width: 240px;
+            height: 240px;
+        }
+    
+
+
     }
 
 
@@ -803,8 +969,9 @@ footer div a i.fa-whatsapp-square:hover{
     100%{transform:rotate(360deg)}
     }
 
-    @keyframes zoom{
-        100%{transform:scale(1.4)}
+    @keyframes scale{
+        100%{transform:scale(1)}
+        50%{transform:scale(1.5)}
         0%{transform:scale(1)}
     }
 
