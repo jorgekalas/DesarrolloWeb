@@ -42,6 +42,7 @@ main.galeria section.galeria div.galeria div.flip-container {
 main.galeria section.galeria div.galeria div.flip-container:hover .card {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
+          cursor:pointer;
 }
 
 main.galeria section.galeria div.galeria div.flip-container div.card {
@@ -85,5 +86,6 @@ main.galeria section.galeria div.galeria div.flip-container div.card div.back {
 main.galeria section.galeria div.galeria div.flip-container div.card div.back img {
   width: 500px;
   height: 500px;
+  border-radius: 20px;
 }
 /*# sourceMappingURL=galeria.css.map */

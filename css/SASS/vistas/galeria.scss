@@ -25,6 +25,7 @@ main.galeria{
 
                 &:hover .card{
                     transform: rotateY(180deg);
+                    cursor:pointer;
                 }
 
                 div.card{
@@ -54,6 +55,7 @@ main.galeria{
                         img{
                             width: 500px;
                             height: 500px;
+                            border-radius: 20px;
                         }
                     }
                 }
